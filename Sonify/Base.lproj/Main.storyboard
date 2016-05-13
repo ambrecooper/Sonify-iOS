@@ -115,6 +115,7 @@
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Z43-l0-Eoy" appends="YES" id="PFB-cO-TcC"/>
                                     <outletCollection property="gestureRecognizers" destination="VdG-9G-gTK" appends="YES" id="sOw-vG-Vy5"/>
+                                    <outletCollection property="gestureRecognizers" destination="Gp3-x1-LT1" appends="YES" id="lF0-c1-AqP"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -396,6 +397,7 @@
                         <action selector="handlePan:" destination="BYZ-38-t0r" id="zhx-ke-POb"/>
                     </connections>
                 </panGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="Gp3-x1-LT1"/>
             </objects>
             <point key="canvasLocation" x="303" y="357"/>
         </scene>
