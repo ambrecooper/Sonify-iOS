@@ -112,5 +112,23 @@ UINavigationControllerDelegate
         self.dismissViewControllerAnimated(true, completion: nil);
     }
 
+    //  When the user drags thier finger on the image
+    @IBAction func handlePan(recognizer:UIPanGestureRecognizer) {
+        //  when their finger starts to drag
+        if recognizer.state == UIGestureRecognizerState.Began {
+            //  play tone
+        }
+        //  when they stop dragging their finger
+        if recognizer.state == UIGestureRecognizerState.Ended {
+            //  stop tone
+        }
+    }
+    
+    //  when the user taps on the screen
+    @IBAction func handleTap(recognizer:UITapGestureRecognizer) {
+        //  check for description
+            //  read if found
+    }
+    
 }
 

@@ -19,9 +19,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nXW-oS-5Cc">
-                                <rect key="frame" x="20" y="20" width="560" height="520"/>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xc8-CF-Uhh">
                                 <rect key="frame" x="20" y="556" width="560" height="44"/>
                                 <items>
@@ -112,6 +109,14 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nXW-oS-5Cc">
+                                <rect key="frame" x="20" y="20" width="560" height="520"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Z43-l0-Eoy" appends="YES" id="PFB-cO-TcC"/>
+                                    <outletCollection property="gestureRecognizers" destination="VdG-9G-gTK" appends="YES" id="sOw-vG-Vy5"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -381,6 +386,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Z43-l0-Eoy">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="IUq-Ta-mGa"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="VdG-9G-gTK">
+                    <connections>
+                        <action selector="handlePan:" destination="BYZ-38-t0r" id="zhx-ke-POb"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="303" y="357"/>
         </scene>
